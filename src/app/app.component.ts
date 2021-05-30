@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'aulaangular';
+  title = 'Cadastro de Clientes';
+  nome = '';
+  vetor = ['tv',' sofá',' computador', ' som', ' cama', ' ventilador'];
+  add(){
+    let n = this.nome;
+    this.vetor.push(n);
+    this.nome ='';
+  }
+  remover(x: number){
+    this.vetor.splice(x,1);
+  }
 }
